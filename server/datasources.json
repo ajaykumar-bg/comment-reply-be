@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mySqlDs": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "url": "",
+    "database": "commentsDb",
+    "password": "Akbg@1405",
+    "name": "mySqlDs",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
