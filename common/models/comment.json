@@ -1,0 +1,38 @@
+{
+  "name": "comment",
+  "plural": "comments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "datetime": {
+      "type": "date",
+      "required": true
+    },
+    "commentId": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "replyComment": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": "commentId"
+    },
+    "parentComment": {
+      "type": "belongsTo",
+      "model": "comment",
+      "foreignKey": "commentId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
